@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent songDetailsScreen = new Intent(this,Details.class);
         startActivity(songDetailsScreen);
     }
+
+    public void openNowplaying(View view){
+        Intent nowPlayinScreen = new Intent(this,Nowplaying.class);
+        startActivity(nowPlayinScreen);
+    }
 }

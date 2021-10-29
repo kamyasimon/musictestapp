@@ -2,18 +2,24 @@ package com.hipipo.momusic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
 
 public class Playlist extends AppCompatActivity {
 int playListItems;
+    Nowplaying nowplaying = new Nowplaying();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +44,25 @@ int playListItems;
 
         listView.setAdapter(itemsAdapter);
 
+        /*TextView getsongdets = (TextView) findViewById(R.id.songnames);
+        MainActivity main = new MainActivity();
+        getsongdets.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+             getParentActivityIntent();
+            }
+        });*/
 
+        listView.setOnClickListener(new AdapterView.OnItemClickListener(){
 
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent nowPlayinScreen = new Intent(view.getContext(),Nowplaying);
+                startActivity(nowPlayinScreen);
+            }
+        });
 
     }
+
 }

@@ -10,7 +10,8 @@ public class Songs {
     //private ImageReader songImage;
 
     public Songs(String songTitle,String songArtist){
-
+        this.songTitle=songTitle;
+        this.songArtist=songArtist;
     }
 
     public String getSongTitle() {
