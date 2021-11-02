@@ -1,17 +1,12 @@
 package com.hipipo.momusic;
 
-import android.media.ImageReader;
-/*
-Define class
-* **/
 public class Songs {
     private String songTitle;
     private String songArtist;
-    //private ImageReader songImage;
 
-    public Songs(String songTitle,String songArtist){
-        this.songTitle=songTitle;
-        this.songArtist=songArtist;
+    public Songs(String songTitle, String songArtist) {
+        this.songTitle = songTitle;
+        this.songArtist = songArtist;
     }
 
     public String getSongTitle() {
@@ -21,6 +16,5 @@ public class Songs {
     public String getSongArtist() {
         return songArtist;
     }
-
 
 }

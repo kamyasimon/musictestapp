@@ -9,15 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoMusic">
-        <activity android:name=".Nowplaying"
+
+        <activity
+            android:name=".Nowplaying"
             android:label="Now Playing"
+            android:parentActivityName=".Playlist"
             ></activity>
+
         <activity
             android:name=".Details"
-            android:label="Details" />
+            android:label="Details"
+            android:parentActivityName=".Playlist" />
+
         <activity
             android:name=".Playlist"
-            android:label="Play List" />
+            android:label="Play List"
+            android:parentActivityName=".MainActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Mo Music</string>
+    <string name="song1">Thats the way it is</string>
+    <string name="artist1">Lucky Dube</string>
+    <string name="song2">Prisoner</string>
+    <string name="artist2">Lucky Dube</string>
+    <string name="song3">Ohana</string>
+    <string name="artist3">Nettson</string>
+    <string name="song4">Candy Land 1</string>
+    <string name="artist4">Tobu</string>
+    <string name="song5">Your Song</string>
+    <string name="artist5">Elton John</string>
 </resources>

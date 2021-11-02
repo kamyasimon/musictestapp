@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,20 +13,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        openPlayLIst();
+        openSongDetails();
     }
 
-    public void openPlayLIst(View view) {
-        Intent playListScreen = new Intent(this,Playlist.class);
-        startActivity(playListScreen);
+    //Open Playlist Intent
+    public void openPlayLIst() {
+        ImageView playlist = (ImageView) findViewById(R.id.playlist);
+        playlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playListScreen = new Intent(MainActivity.this, Playlist.class);
+                startActivity(playListScreen);
+            }
+        });
     }
 
-    public void openSongDetails(View view) {
-        Intent songDetailsScreen = new Intent(this,Details.class);
-        startActivity(songDetailsScreen);
-    }
-
-    public void openNowplaying(View view){
-        Intent nowPlayinScreen = new Intent(this,Nowplaying.class);
-        startActivity(nowPlayinScreen);
+    //Open Song Details Intent
+    public void openSongDetails() {
+        ImageView songDetails = (ImageView) findViewById(R.id.songDetails);
+        songDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent songDetailsScreen = new Intent(MainActivity.this, Details.class);
+                startActivity(songDetailsScreen);
+            }
+        });
     }
 }
